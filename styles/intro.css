@@ -1,0 +1,57 @@
+.intro-section {
+  padding: 4rem 1rem;
+  background: #dbecfa;
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.intro-section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+.intro-container {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.intro-left {
+  flex: 1;
+}
+
+.intro-left h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.intro-left h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  color: #0b3c5d;
+}
+
+.intro-right {
+  flex: 1.2;
+}
+
+.intro-right p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .intro-left h1 {
+    font-size: 1.8rem;
+  }
+}

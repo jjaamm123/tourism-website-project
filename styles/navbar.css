@@ -1,0 +1,50 @@
+.navbar {
+  background: linear-gradient(
+    180deg,
+    #1e90ff 0%,
+    #1e90ff 45%,
+    #1e90ff 75%
+  );
+  color: white;
+}
+
+.navbar h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin: 0 10px 0 0;
+
+  color: white;
+
+  line-height: 1.2;
+
+  display: inline-block;
+
+}
+
+
+
+nav a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.4rem 0.7rem;   
+  border-radius: 25px; 
+  opacity: 0.9;
+  transition: color 0.1s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #333;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .brand {
+    font-size: 1.7rem;
+  }
+}
