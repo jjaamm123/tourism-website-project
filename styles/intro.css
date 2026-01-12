@@ -55,3 +55,36 @@
     font-size: 1.8rem;
   }
 }
+
+
+.primary-cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+
+  padding: 0.9rem 1.8rem;
+  background-color: #1f6f5c; /* Himalayan green */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  text-decoration: none;
+  border-radius: 6px;
+
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-cta:hover {
+  background-color: #185a4a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.primary-cta:active {
+  transform: translateY(0);
+}
+
+.primary-cta:focus-visible {
+  outline: 3px solid #cfe8e2;
+  outline-offset: 3px;
+}
