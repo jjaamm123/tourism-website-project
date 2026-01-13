@@ -14,6 +14,8 @@
   overflow-x: auto;
   padding-bottom: 0.5rem;
   scroll-snap-type: x mandatory;
+  padding-left: calc((100vw - 1100px) / 2);
+  padding-right: calc((100vw - 1100px) / 2);
 }
 
 .tour-rail::-webkit-scrollbar {
@@ -122,3 +124,10 @@ tours-title {
   outline: 3px solid #cfe8e2;
   outline-offset: 3px;
 }
+
+.tour-rail-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+

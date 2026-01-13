@@ -6,7 +6,8 @@
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  max-height: fit-content;
+  max-height: 1000px;
+  height: clamp(300px, 45vh, 460px);
 }
 
 .carousel-track {
@@ -38,11 +39,8 @@
 }
 
 .carousel-caption {
-  
   position: absolute;
-  bottom: 15%;
-  right: 8%;
-
+  inset: auto 8% 2.5rem auto; 
   max-width: 520px;
 
   color: #ffffff;

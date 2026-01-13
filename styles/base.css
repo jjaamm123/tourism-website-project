@@ -17,7 +17,7 @@ body {
 main {
   flex: 1;
   padding: 2rem 1rem; 
-  max-width: 1200px; 
+  max-width: 1600px;
   margin: 0 auto; 
 }
 
@@ -30,4 +30,9 @@ header {
   color: white; 
   padding: 2rem 1rem; 
   text-align: center; 
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
