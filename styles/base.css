@@ -5,13 +5,17 @@
 }
 
 body {
-  font-family: Arial, sans-serif; 
+  font-family: 'Inter', sans-serif;
   line-height: 1.6; 
   min-height: 100vh; 
   display: flex; 
   flex-direction: column; 
   background: #8dc4fe;
   color: #333; 
+}
+
+h1, h2, h3, h4, .brand {
+  font-family: 'Poppins', sans-serif;
 }
 
 main {

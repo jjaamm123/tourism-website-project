@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="styles/rail.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <title>Tours</title>
 </head>
 <body>
@@ -26,22 +28,44 @@
     </div>
 </header>
 <main>
-    <section class="gallery">
-        <section class="gallery-hero">
-            <div class="carousel hero-carousel">
-                <div class="carousel-track">
-                <img src="https://picsum.photos/1400/600?1" alt="Memory 1">
-                <img src="https://picsum.photos/1400/600?2" alt="Memory 2">
-                <img src="https://picsum.photos/1400/600?3" alt="Memory 3">
+    <section class="why-carousel">
+        <div class="carousel">
+            <div class="carousel-track">
+
+            <div class="carousel-slide">
+                <img src="images/carousel/img2.jpg"
+                    alt="Himalayan mountains in Nepal at sunrise"
+                    loading="lazy">
+                <div class="carousel-caption">
+                <h2>This is what travelling with us feels like</h2>
                 </div>
             </div>
 
-            <div class="carousel-dots">
+            <div class="carousel-slide">
+                <img src="images/carousel/img1.jpg"
+                    alt="Boudhanath Stupa in Kathmandu, Nepal"
+                    loading="lazy">
+                <div class="carousel-caption">
+                <h2>Come see the world a little differently.</h2>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <img src="images/carousel/img3.jpg"
+                    alt="Tibetan monastery with prayer flags in the Himalayas"
+                    loading="lazy">
+                <div class="carousel-caption">
+                <h2>Travel at your pace, with people who know the way.</h2>
+                </div>
+            </div>
+            </div>
+        </div>
+                <div class="carousel-dots">
                 <span class="dot active"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
             </div>
-        </section>
+    </section>
 
 
         <div class="gallery-container">
@@ -51,38 +75,41 @@
                 </p>
 
                 <section class="country-gallery">
-                <h3 class="country-title">Italy</h3>
+                <h3 class="country-title">Our Nepali Tours</h3>
                 <p class="country-desc">
-                    Historic cities, timeless art, and unforgettable cuisine.
+                    Our past tours in Nepal have taken travelers through
+                    the majestic Himalayas, ancient temples, and vibrant local markets.
                 </p>
                 <div class="gallery-grid">
-                    <img src="https://picsum.photos/800/450?italy1" alt="Italy 1">
-                    <img src="https://picsum.photos/800/450?italy2" alt="Italy 2">
-                    <img src="https://picsum.photos/800/450?italy3" alt="Italy 3">
+                    <img src="images/cards/lumbini.jpg" alt="Italy 1">
+                    <img src="images/cards/ktm-dubar.jpg" alt="Italy 2">
+                    <img src="images/top/chitwan-top.jpg" alt="Italy 3">
                 </div>
                 </section>
 
                 <section class="country-gallery">
-                    <h3 class="country-title">France</h3>
+                    <h3 class="country-title">Our Breathtaking Treks</h3>
                     <p class="country-desc">
-                        Romantic streets, world-class food, and iconic landmarks.
+                        From the Annapurna Circuit to Everest Base Camp,
+                        our trekking tours have offered unforgettable adventures.
                     </p>
                 <div class="gallery-grid">
-                    <img src="https://picsum.photos/800/450?france1" alt="France 1">
-                    <img src="https://picsum.photos/800/450?france2" alt="France 2">
-                    <img src="https://picsum.photos/800/450?france3" alt="France 3">
+                    <img src="images/cards/everest.jpg" alt="France 1">
+                    <img src="images/cards/poonhill.jpg" alt="France 2">
+                    <img src="images/carousel/trek.jpg" alt="France 3">
                 </div>
                 </section>
 
                 <section class="country-gallery">
-                <h3 class="country-title">Iceland</h3>
+                <h3 class="country-title">Our Trips to Tibet</h3>
                 <p class="country-desc">
-                    Breathtaking landscapes, geothermal wonders, and the Northern Lights.
+                    Our journeys to Tibet have immersed travelers in
+                    rich cultural heritage and stunning landscapes.
                 </p>
                 <div class="gallery-grid">
-                    <img src="https://picsum.photos/800/450?iceland1" alt="Iceland 1">
-                    <img src="https://picsum.photos/800/450?iceland2" alt="Iceland 2">
-                    <img src="https://picsum.photos/800/450?iceland3" alt="Iceland 3">
+                    <img src="images/cards/gekong.jpg" alt="Iceland 1">
+                    <img src="images/carousel/tibet-monastery-carousel.jpg" alt="Iceland 2">
+                    <img src="images/top/lhasa-top.jpg" alt="Iceland 3">
                 </div>
                 </section>
         </div>
@@ -124,7 +151,7 @@
     </div>
     </footer>
 
-    <script src="carousel.js"></script>
+    <script src="js/carousel.js"></script>
 
 </body>
 </html>
