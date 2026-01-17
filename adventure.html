@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Sports in Nepal - Your Tourism Business</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/intro.css">
+    <link rel="stylesheet" href="styles/carousel.css">
+    <link rel="stylesheet" href="styles/rail.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/cards.css">
+    <link rel="stylesheet" href="styles/adventure.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Your Tourism Business</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="tours.html">Tours</a>
+                <a href="adventure.html">Adventure Sports</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="gallery.html">Gallery</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="adventure-hero">
+            <div class="hero-content">
+
+                <h1>Nepal Adventure Sports</h1>
+                <p>Extreme Thrills in the Himalayan Paradise</p>
+                <a href="#all-activities" class="hero-cta">Explore Adventures</a>
+            </div>
+        </section>
+
+        <section class="intro-section">
+            <div class="intro-container">
+                <div class="intro-left">
+                    <h2>Adventure Awaits</h2>
+                    <h1>Extreme Sports in Nepal</h1>
+                </div>
+                <div class="intro-right">
+                    <p>
+                        Nepal isn't just about temples and trekking - it's an adventure playground! 
+                        From white-water rafting in raging rivers to paragliding over Pokhara's lakes, 
+                        Nepal offers some of the world's most thrilling adventure sports.
+                    </p>
+                    <p>
+                        With diverse landscapes ranging from Himalayan peaks to tropical jungles, 
+                        you'll find adrenaline-pumping activities for every level of adventurer.
+                    </p>
+                    <p>
+                        All our adventure activities are operated by certified professionals with 
+                        international safety standards. Your thrill is our priority!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="all-activities" class="adventure-categories">
+            <h2>Adventure Categories</h2>
+            <div class="category-filters">
+                <button class="filter-btn active" data-filter="all">All Activities</button>
+                <button class="filter-btn" data-filter="water">Water Sports</button>
+                <button class="filter-btn" data-filter="air">Air Sports</button>
+                <button class="filter-btn" data-filter="land">Land Adventures</button>
+                <button class="filter-btn" data-filter="extreme">Extreme Sports</button>
+            </div>
+
+            <div class="adventure-grid">
+                <div class="adventure-card" data-category="water extreme">
+                    <div class="adventure-image">
+                        <img src="images/top/rafting-top.jpg" alt="White Water Rafting in Nepal">
+                        <span class="difficulty intermediate">INTERMEDIATE</span>
+                    </div>
+                    <div class="adventure-content">
+                        <h3>White Water Rafting</h3>
+                        <p>Conquer raging Himalayan rivers with class III-IV rapids. Choose from Trishuli, Bhote Koshi, or Sun Koshi rivers.</p>
+                        <div class="adventure-details">
+                            <span class="duration">1-10 Days</span>
+                            <span class="season">Sep-May</span>
+                            <span class="price">From $45/day</span>
+                        </div>
+                        <a href="adventure/rafting.html" class="adventure-btn">Learn More</a>
+                    </div>
+                </div>
+
+
+                <div class="adventure-card" data-category="air">
+                    <div class="adventure-image">
+                        <img src="images/adventure/paragliding.jpg" alt="Paragliding in Pokhara">
+                        <span class="difficulty beginner">BEGINNER</span>
+                    </div>
+                    <div class="adventure-content">
+                        <h3>Paragliding</h3>
+                        <p>Soar like a bird over Pokhara Valley with stunning views of Annapurna range and Phewa Lake.</p>
+                        <div class="adventure-details">
+                            <span class="duration">30-60 mins</span>
+                            <span class="season">Year-round</span>
+                            <span class="price">From $85</span>
+                        </div>
+                        <a href="adventure/paragliding.html" class="adventure-btn">Learn More</a>
+                    </div>
+                </div>
+
+
+                <div class="adventure-card" data-category="extreme">
+                    <div class="adventure-image">
+                        <img src="images/top/bungee-jump.jpg" alt="Bungee Jumping in Nepal">
+                        <span class="difficulty advanced">ADVANCED</span>
+                    </div>
+                    <div class="adventure-content">
+                        <h3>Bungee Jumping</h3>
+                        <p>Experience Nepal's highest bungee jump - 160m plunge into the Bhote Koshi gorge.</p>
+                        <div class="adventure-details">
+                            <span class="duration">1 Day</span>
+                            <span class="season">Year-round</span>
+                            <span class="price">From $95</span>
+                        </div>
+                        <a href="adventure/bungee.html" class="adventure-btn">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="adventure-card" data-category="land">
+                    <div class="adventure-image">
+                        <img src="images/adventure/mountain-biking.jpg" alt="Mountain Biking in Himalayas">
+                        <span class="difficulty intermediate">INTERMEDIATE</span>
+                    </div>
+                    <div class="adventure-content">
+                        <h3>Mountain Biking</h3>
+                        <p>Downhill and cross-country biking through Himalayan trails, forests, and villages.</p>
+                        <div class="adventure-details">
+                            <span class="duration">1-10 Days</span>
+                            <span class="season">Sep-May</span>
+                            <span class="price">From $45/day</span>
+                        </div>
+                        <a href="adventure/mountain-biking.html" class="adventure-btn">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="adventure-card" data-category="air">
+                    <div class="adventure-image">
+                        <img src="images/adventure/ultralight.jpg" alt="Ultra Light Flight in Pokhara">
+                        <span class="difficulty beginner">BEGINNER</span>
+                    </div>
+                    <div class="adventure-content">
+                        <h3>Ultra Light Flight</h3>
+                        <p>Fly in an open cockpit aircraft over Pokhara with panoramic mountain views.</p>
+                        <div class="adventure-details">
+                            <span class="duration">30-60 mins</span>
+                            <span class="season">Sep-Jun</span>
+                            <span class="price">From $120</span>
+                        </div>
+                        <a href="adventure/ultralight.html" class="adventure-btn">Learn More</a>
+                    </div>
+                </div>
+
+
+                <div class="adventure-card" data-category="land extreme">
+                    <div class="adventure-image">
+                        <img src="images/adventure/rock-climbing.jpg" alt="Rock Climbing in Nepal">
+                        <span class="difficulty intermediate">INTERMEDIATE</span>
+                    </div>
+                    <div class="adventure-content">
+                        <h3>Rock Climbing</h3>
+                        <p>Indoor and outdoor climbing at Kathmandu's climbing walls or natural rock faces.</p>
+                        <div class="adventure-details">
+                            <span class="duration">Half/Full Day</span>
+                            <span class="season">Year-round</span>
+                            <span class="price">From $55</span>
+                        </div>
+                        <a href="adventure/rock-climbing.html" class="adventure-btn">Learn More</a>
+                    </div>
+                </div>
+
+
+                <div class="adventure-card" data-category="water">
+                    <div class="adventure-image">
+                        <img src="images/adventure/kayaking.jpg" alt="Kayaking in Himalayan Rivers">
+                        <span class="difficulty advanced">ADVANCED</span>
+                    </div>
+                    <div class="adventure-content">
+                        <h3>White Water Kayaking</h3>
+                        <p>Paddle through technical rapids with expert guides. Courses available for beginners.</p>
+                        <div class="adventure-details">
+                            <span class="duration">1-7 Days</span>
+                            <span class="season">Sep-May</span>
+                            <span class="price">From $65/day</span>
+                        </div>
+                        <a href="adventure/kayaking.html" class="adventure-btn">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="adventure-card" data-category="land">
+                    <div class="adventure-image">
+                        <img src="images/top/safari-top.jpg" alt="Jungle Safari in Chitwan">
+                        <span class="difficulty beginner">BEGINNER</span>
+                    </div>
+                    <div class="adventure-content">
+                        <h3>Wilderness Safari</h3>
+                        <p>Elephant back safaris, canoeing, jungle walks in Chitwan or Bardia National Parks.</p>
+                        <div class="adventure-details">
+                            <span class="duration">2-4 Days</span>
+                            <span class="season">Sep-Jun</span>
+                            <span class="price">From $120/day</span>
+                        </div>
+                        <a href="adventure/jungle-safari.html" class="adventure-btn">Learn More</a>
+                    </div>
+                </div>
+
+
+                <div class="adventure-card" data-category="air">
+                    <div class="adventure-image">
+                        <img src="images/adventure/helicopter.jpg" alt="Helicopter Tour to Everest">
+                        <span class="difficulty beginner">BEGINNER</span>
+                    </div>
+                    <div class="adventure-content">
+                        <h3>Helicopter Tour</h3>
+                        <p>See Everest up close! Helicopter tours to Everest Base Camp or Annapurna Circuit.</p>
+                        <div class="adventure-details">
+                            <span class="duration">3-5 hours</span>
+                            <span class="season">Year-round</span>
+                            <span class="price">From $1,200</span>
+                        </div>
+                        <a href="adventure/helicopter.html" class="adventure-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="safety-section">
+            <div class="safety-container">
+                <h2>Your Safety is Our Priority</h2>
+                <div class="safety-features">
+                    <div class="safety-item">
+                        <div class="safety-icon">✓</div>
+                        <h3>Certified Guides</h3>
+                        <p>All guides are internationally certified with first aid training</p>
+                    </div>
+                    <div class="safety-item">
+                        <div class="safety-icon">✓</div>
+                        <h3>Quality Equipment</h3>
+                        <p>Regularly inspected equipment meeting international standards</p>
+                    </div>
+                    <div class="safety-item">
+                        <div class="safety-icon">✓</div>
+                        <h3>Insurance Coverage</h3>
+                        <p>All activities include comprehensive insurance coverage</p>
+                    </div>
+                    <div class="safety-item">
+                        <div class="safety-icon">✓</div>
+                        <h3>Small Groups</h3>
+                        <p>Personalized attention with low guide-to-client ratios</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <section class="adventure-cta">
+                <div class="cta-container">
+                    <h2>Ready for Your Adventure?</h2>
+                    <p>Book your adrenaline-pumping experience or create a custom adventure package</p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/1234567890" class="primary-cta">Book Now on WhatsApp</a>
+                        <a href="contact.html" class="secondary-cta">Customize Package</a>
+                    </div>
+                </div>
+            </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">What's the best time for adventure sports in Nepal?</button>
+                    <div class="faq-answer">
+                        <p>The best seasons are Spring (March-May) and Autumn (September-November). However, some activities like paragliding and bungee jumping operate year-round. Monsoon season (June-August) is best for white-water rafting.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do I need previous experience?</button>
+                    <div class="faq-answer">
+                        <p>Most activities offer options for complete beginners. Activities are graded by difficulty level. We provide training and guidance for first-timers. Only a few extreme sports require previous experience.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What should I wear/bring?</button>
+                    <div class="faq-answer">
+                        <p>Comfortable sportswear, closed shoes, sunscreen, water bottle. Specific gear is provided for each activity. We'll send you a detailed packing list after booking.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Is there an age/weight limit?</button>
+                    <div class="faq-answer">
+                        <p>Most activities: Minimum 12-16 years, maximum 65-70 years. Weight limits vary (typically 100-120kg). Health restrictions apply for certain activities. Contact us for specific requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>Your Tourism Business</h3>
+                <p>Personalized tours and authentic travel experiences, crafted by local experts.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
+                <p>Address: 123 Main Street, Your City</p>
+            </div>
+            <div class="footer-cta">
+                <h4>Let's Plan Your Adventure</h4>
+                <a href="https://wa.me/1234567890" target="_blank" class="footer-whatsapp">Chat on WhatsApp</a>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Your Tourism Business. All rights reserved.</div>
+    </footer>
+
+    <script src="js/adventure.js"></script>
+</body>
+</html>
