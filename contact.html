@@ -3,64 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../styles/base.css">
-        <link rel="stylesheet" href="../styles/navbar.css">
-        <link rel="stylesheet" href="../styles/intro.css">
-        <link rel="stylesheet" href="../styles/carousel.css">
-        <link rel="stylesheet" href="../styles/rail.css">
-        <link rel="stylesheet" href="../styles/footer.css">
-        <link rel="stylesheet" href="../styles/about.css">
-        <link rel="stylesheet" href="../styles/contact.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-
-    <title>Tours</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/intro.css">
+    <link rel="stylesheet" href="styles/carousel.css">
+    <link rel="stylesheet" href="styles/rail.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/form-validation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Contact Us - Your Tourism Business</title>
 </head>
 <body>
     <header>
-    <div class="navbar">
-        <h1>Your Tourism Business</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="tours.html">Tours</a>
-            <a href="adventure.html">Adventure Sports</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-            <a href="gallery.html">Gallery</a>
-        </nav>
-    </div>
-</header>
+        <div class="navbar">
+            <h1>Your Tourism Business</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="tours.html">Tours</a>
+                <a href="adventure.html">Adventure Sports</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="calculator.html">Tour Calculator</a>
+            </nav>
+        </div>
+    </header>
 
-<main>
-
-    <section class="contact-page">
+    <main>
+        <section class="contact-page">
             <section class="contact">
                 <div class="contact-surface">
                     <div class="contact-container">
-                    <h2>Get in Touch</h2>
-                    <p class="contact-subtitle">
-                    Have a question or want to plan a trip? Send us a message.
-                    </p>
+                        <h2>Get in Touch</h2>
+                        <p class="contact-subtitle">
+                            Have a question or want to plan a trip? Send us a message.
+                        </p>
 
-                    <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Your full name" required>
+                        <!-- Form Status Messages -->
+                        <div id="form-status" class="form-status"></div>
+
+                        <!-- Updated Form with Google Sheets Integration -->
+                        <form id="contact-form" class="contact-form">
+                            <!-- Honeypot field for spam protection -->
+                            <div class="honeypot">
+                                <input type="text" name="_honeypot" id="_honeypot" tabindex="-1" autocomplete="off">
+                            </div>
+                            
+                            <!-- Hidden fields for tracking -->
+                            <input type="hidden" name="_subject" value="New Contact Form Submission">
+                            <input type="hidden" name="_source" value="contact-page">
+                            <input type="hidden" name="_timestamp" id="_timestamp">
+                            <input type="hidden" name="_page" value="contact">
+                            
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" placeholder="Your full name" required>
+                                <div class="error-message" id="name-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                                <div class="error-message" id="email-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone (Optional)</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
+                                <div class="error-message" id="phone-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tour-interest">Tour Interest</label>
+                                <select id="tour-interest" name="tour_interest">
+                                    <option value="">Select an option</option>
+                                    <option value="Nepal Cultural Tours">Nepal Cultural Tours</option>
+                                    <option value="Tibet Spiritual Tours">Tibet Spiritual Tours</option>
+                                    <option value="Himalayan Trekking">Himalayan Trekking</option>
+                                    <option value="Adventure Sports">Adventure Sports</option>
+                                    <option value="Jungle Safari">Jungle Safari</option>
+                                    <option value="Family Vacation">Family Vacation</option>
+                                    <option value="Custom Package">Custom Package</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell us about your travel plans, interests, budget, and any specific requirements..." required></textarea>
+                                <div class="error-message" id="message-error"></div>
+                            </div>
+
+                            <!-- Spam protection checkbox -->
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="human-check" name="human_check" required>
+                                <label for="human-check">I'm a human interested in travel (spam protection)</label>
+                                <div class="error-message" id="human-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" id="submit-btn">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="spinner">⏳ Sending...</span>
+                                </button>
+                                <p class="form-note">
+                                    We respond within 24 hours. Your information is secure and won't be shared.
+                                </p>
+                            </div>
+                        </form>
                     </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="you@email.com" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="5" placeholder="How can we help?" required></textarea>
-                    </div>
-
-                    <button type="submit">Send Message</button>
-                    </form>
-                </div>
                 </div>
             </section>
 
@@ -68,23 +121,35 @@
                 <div class="address-surface">
                     <div class="address-container">
                         <div class="address-content">
-                        <div class="address-text">
-                            <h2>Visit Us</h2>
-                            <h3>Office Address</h3>
-                            <p>123 Main Street</p>
-                            <p>City, Country</p>
+                            <div class="address-text">
+                                <h2>Visit Us</h2>
+                                <h3>Office Address</h3>
+                                <p>123 Main Street</p>
+                                <p>Kathmandu 44600, Nepal</p>
 
-                            <h3>Contact</h3>
-                            <p>Email: mail@mail.com</p>
-                            <p>Phone: +1 234 567 890</p>
-                        </div>
+                                <h3>Contact</h3>
+                                <p>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
+                                <p>Phone: <a href="tel:+977-1-1234567">+977 1 1234567</a></p>
+                                <p>Mobile/WhatsApp: <a href="tel:+977-9801234567">+977 9801234567</a></p>
+                                
+                                <h3>Business Hours</h3>
+                                <p>Sunday-Friday: 9:00 AM - 6:00 PM</p>
+                                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                                <p>Closed on public holidays</p>
+                            </div>
 
-                        <div class="address-map">
-                            <iframe
-                            src="https://www.google.com/maps?q=Kathmandu,Nepal&output=embed"
-                            loading="lazy"
-                            ></iframe>
-                        </div>
+                            <div class="address-map">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.6215179097533!2d85.3180171150318!3d27.70324538279528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199f16a0a151%3A0x11f5c7f1f1c4f2f5!2sKathmandu%2C%20Nepal!5e0!3m2!1sen!2s!4v1630000000000!5m2!1sen!2s"
+                                    width="100%"
+                                    height="300"
+                                    style="border:0;"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Our Location in Kathmandu, Nepal">
+                                </iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -93,67 +158,87 @@
                         <h3>Reach Us Directly</h3>
 
                         <a href="mailto:mail@mail.com" class="contact-link">
-                            <span>Email</span>
-                            <strong>mail@mail.com</strong>
+                            <span class="link-icon">📧</span>
+                            <div class="link-content">
+                                <span class="link-label">Email</span>
+                                <strong class="link-value">mail@mail.com</strong>
+                            </div>
                         </a>
 
-                        <a href="tel:+1234567890" class="contact-link">
-                            <span>Phone</span>
-                            <strong>+1 234 567 890</strong>
+                        <a href="tel:+977-1-1234567" class="contact-link">
+                            <span class="link-icon">📞</span>
+                            <div class="link-content">
+                                <span class="link-label">Office Phone</span>
+                                <strong class="link-value">+977 1 1234567</strong>
+                            </div>
                         </a>
 
-                        <a href="https://wa.me/1234567890" target="_blank" class="contact-link primary">
-                            Chat on WhatsApp
+                        <a href="tel:+977-9801234567" class="contact-link">
+                            <span class="link-icon">📱</span>
+                            <div class="link-content">
+                                <span class="link-label">Mobile / WhatsApp</span>
+                                <strong class="link-value">+977 9801234567</strong>
+                            </div>
+                        </a>
+
+                        <a href="https://wa.me/9779801234567?text=Hi!%20I'm%20interested%20in%20your%20tours%20from%20your%20website." 
+                           target="_blank" 
+                           class="contact-link primary">
+                            <span class="link-icon">💬</span>
+                            <span class="link-text">Chat on WhatsApp</span>
                         </a>
 
                         <div class="social-links">
-                            <a href="#" aria-label="Instagram">Instagram</a>
-                            <a href="#" aria-label="Facebook">Facebook</a>
-                            <a href="#" aria-label="Twitter">X</a>
+                            <h4>Follow Our Adventures</h4>
+                            <div class="social-icons">
+                                <a href="#" aria-label="Instagram" class="social-icon">
+                                    <span>📷 Instagram</span>
+                                </a>
+                                <a href="#" aria-label="Facebook" class="social-icon">
+                                    <span>👥 Facebook</span>
+                                </a>
+                                <a href="#" aria-label="YouTube" class="social-icon">
+                                    <span>🎬 YouTube</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </section>
-    </section>
-
-</main>
+        </section>
+    </main>
 
     <footer class="site-footer">
-    <div class="footer-container">
-
-        <div class="footer-brand">
-        <h3>Your Tourism Business</h3>
-        <p>
-            Personalized tours and authentic travel experiences,
-            crafted by local experts.
-        </p>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>Your Tourism Business</h3>
+                <p>
+                    Personalized tours and authentic travel experiences,
+                    crafted by local experts.
+                </p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
+                <p>Address: 123 Main Street, Kathmandu</p>
+            </div>
+            <div class="footer-cta">
+                <h4>Let's Plan Your Trip</h4>
+                <a href="https://wa.me/9779801234567?text=Hi!%20I%20saw%20your%20website%20and%20want%20to%20plan%20a%20trip." 
+                    target="_blank" 
+                    class="footer-whatsapp">
+                    💬 Chat on WhatsApp
+                </a>
+            </div>
         </div>
-
-        <div class="footer-contact">
-        <h4>Contact</h4>
-        <p>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
-        <p>Address: 123 Main Street, Your City</p>
+        <div class="footer-bottom">
+            © 2026 Your Tourism Business. All rights reserved. | 
+            <a href="/privacy.html">Privacy Policy</a> | 
+            <a href="/terms.html">Terms & Conditions</a>
         </div>
-
-        <div class="footer-cta">
-        <h4>Let’s Plan Your Trip</h4>
-        <a
-            href="https://wa.me/1234567890"
-            target="_blank"
-            class="footer-whatsapp"
-        >
-            Chat on WhatsApp
-        </a>
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        © 2026 Your Tourism Business. All rights reserved.
-    </div>
     </footer>
 
-    <script src="js/form-validation.js"></script>
+    <!-- Google Sheets Integration Script -->
+    <script src="js/contact.js"></script>
 </body>
 </html>

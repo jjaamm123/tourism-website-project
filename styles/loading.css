@@ -1,0 +1,124 @@
+
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #daecfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#loading-overlay.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+
+.peak-loader {
+  position: relative;
+  width: 120px;
+  height: 60px;
+  margin: 0 auto 20px;
+}
+
+.peak {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(45deg, #1e90ff, #3498db);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: peakGlow 2s ease-in-out infinite;
+}
+
+
+.peak:nth-child(1) {
+  left: 0;
+  width: 40px;
+  height: 40px;
+  animation-delay: 0s;
+}
+
+.peak:nth-child(2) {
+  left: 40px;
+  width: 50px;
+  height: 55px;
+  animation-delay: 0.2s;
+  background: linear-gradient(45deg, #1e90ff, #2c3e50);
+}
+
+
+.peak:nth-child(3) {
+  right: 0;
+  width: 35px;
+  height: 38px;
+  animation-delay: 0.4s;
+}
+
+
+.sun-dot {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #f39c12;
+  border-radius: 50%;
+  animation: sunOrbit 3s linear infinite;
+}
+
+
+.loading-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #2c3e50;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+@keyframes peakGlow {
+  0%, 100% {
+    opacity: 0.7;
+    filter: drop-shadow(0 0 5px rgba(52, 152, 219, 0.3));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px rgba(52, 152, 219, 0.6));
+  }
+}
+
+@keyframes sunOrbit {
+  0% {
+    transform: translateX(-50%) rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: translateX(-50%) rotate(90deg) translateY(-8px);
+  }
+  50% {
+    transform: translateX(-50%) rotate(180deg) translateY(0);
+  }
+  75% {
+    transform: translateX(-50%) rotate(270deg) translateY(8px);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg) translateY(0);
+  }
+}
+
+
+body.content-loaded {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

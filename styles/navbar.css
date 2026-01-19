@@ -6,6 +6,7 @@
     #1e90ff 75%
   );
   color: white;
+  position: relative;
 }
 
 .navbar h1 {
@@ -21,7 +22,6 @@
   display: inline-block;
 
 }
-
 
 
 nav a {
@@ -43,8 +43,161 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-  .brand {
-    font-size: 1.7rem;
-  }
+/* Hero Header - Full Width Styles */
+.hero-header {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 }
+
+/* Full-width navbar */
+.hero-header .navbar {
+  position: relative;
+  z-index: 100;
+  background: transparent;
+  padding: 1.5rem 2rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.hero-header .navbar.scrolled {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.hero-header .brand {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.hero-header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.hero-header nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #1e90ff;
+  transition: width 0.3s ease;
+}
+
+.hero-header nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero container for content centering */
+.hero-container {
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-content {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.hero-text {
+  max-width: 100%;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.hero-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  color: #1e90ff;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-description {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  opacity: 0.95;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 150px;
+}
+
+.primary-btn {
+  background: #1e90ff;
+  color: white;
+  border: 2px solid #1e90ff;
+}
+
+.primary-btn:hover {
+  background: #1c86ee;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+

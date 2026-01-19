@@ -11,12 +11,13 @@
   <link rel="stylesheet" href="../styles/rail.css">
   <link rel="stylesheet" href="../styles/footer.css">
   <link rel="stylesheet" href="../styles/cards.css">
+  <link rel="stylesheet" href="../styles/tours.css">
+  <link rel="stylesheet" href="../styles/loading.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <title>Tours</title>
 </head>
 
-<body>
 
 <header>
   <div class="navbar">
@@ -28,12 +29,29 @@
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact</a>
       <a href="gallery.html">Gallery</a>
+      <a href="calculator.html">Tour Calculator</a>
     </nav>
   </div>
 </header>
 
 <main>
 
+  <body>
+  <!-- Simple Loading Overlay -->
+  <div id="loading-overlay">
+    <div class="loading-content">
+      <!-- Unique Himalayan Peak Loader -->
+      <div class="peak-loader">
+        <div class="peak"></div>
+        <div class="peak"></div>
+        <div class="peak"></div>
+        <div class="sun-dot"></div>
+      </div>
+      <p class="loading-text">Loading your adventure...</p>
+    </div>
+  </div>
+
+  <!-- Rest of your HTML... -->
 
   <section class="tours-intro">
     <div class="container">
@@ -294,6 +312,6 @@
 </footer>
 
 <script src="js/tours-carousel.js"></script>
-
+<script src="js/loading.js"></script>
 </body>
 </html>

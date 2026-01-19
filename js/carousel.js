@@ -50,3 +50,39 @@ updateArrows(track, leftBtn, rightBtn);
 track.addEventListener("scroll", () =>
   updateArrows(track, leftBtn, rightBtn)
 );
+
+
+// Navbar scroll effect
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.hero-header .navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+// Optional: Multiple background images rotation
+const heroImages = [
+  'images/carousel/himalayas-carousel.jpg',
+  'images/carousel/boudha-carousel.jpg',
+  'images/carousel/tibet-monastery-carousel.jpg'
+];
+
+let currentImageIndex = 0;
+
+
+function rotateHeroImage() {
+  const heroBg = document.querySelector('.hero-bg-image');
+  if (heroBg) {
+    heroBg.style.opacity = 0;
+    setTimeout(() => {
+      currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+      heroBg.src = heroImages[currentImageIndex];
+      heroBg.style.opacity = 1;
+    }, 500);
+  }
+}
+
+// Rotate every 8 seconds
+setInterval(rotateHeroImage, 8000);

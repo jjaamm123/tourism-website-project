@@ -1,7 +1,11 @@
 .intro-section {
   padding: 2.5rem 1rem;
   max-width: 1600px;
-  background: #dbecfa;
+  background: linear-gradient(
+        135deg,
+        #eef2f7,
+        #93c4ff
+      );
   border-radius: 16px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }

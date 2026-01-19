@@ -1,6 +1,10 @@
     .mission {
     padding: 4rem 1.5rem;
-    background: #e5eeff;
+        background: linear-gradient(
+            135deg,
+            #eef2f7,
+            #93c4ff
+        );
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     border-radius: 16px;
     }
@@ -56,7 +60,7 @@
         background: linear-gradient(
             135deg,
             #eef2f7,
-            #dbe4f0
+            #93c4ff
         );
         border-radius: 16px;
     }

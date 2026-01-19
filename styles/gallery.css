@@ -118,9 +118,13 @@
 }
 
 
-/* Gallery Banner Styles */
+
 .gallery-banner {
-    background-color: #dbe4f0;
+        background: linear-gradient(
+            135deg,
+            #2b7fd3,
+            #eef2f7
+        );
     padding: 40px 20px;
     text-align: center;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
